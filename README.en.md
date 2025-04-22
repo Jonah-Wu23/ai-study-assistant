@@ -2,6 +2,8 @@
 ## Introduction
 ai-study-assistant is an AI learning assistance platform built based on local GraphRAG. It supports document ingestion, semantic retrieval, and streaming conversations, enabling users to quickly build personalized knowledge bases and efficiently complete learning tasks.
 
+Exsample: http://162.14.126.29/
+
 ## Core Functions
 - Document Ingestion: Supports the import of multiple text format files, automatically slices them, and constructs vector indexes.
 - Semantic Retrieval: Based on the GraphRAG engine, it can quickly locate relevant document segments.
