@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-dotenv
+openai
+langchain
+langchain-community
+langchain-chroma
+sentence-transformers
+pypdf
+unstructured[docx,pptx,pdf,md,txt] # Check specific extras needed
+tiktoken
+python-multipart
+pydantic

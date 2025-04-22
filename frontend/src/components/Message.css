@@ -1,0 +1,93 @@
+/* frontend/src/components/Message.css */
+.message {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.user-message {
+    justify-content: flex-end; /* Align user messages to the right */
+}
+
+.assistant-message {
+    justify-content: flex-start; /* Align assistant messages to the left */
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    word-wrap: break-word; /* Wrap long words */
+    position: relative; /* For potential timestamp or icons later */
+}
+
+.user-message .message-bubble {
+    background-color: #007bff; /* Example blue */
+    color: white;
+    border-bottom-right-radius: 5px; /* Slight visual cue */
+}
+
+.assistant-message .message-bubble {
+    background-color: #e9ecef; /* Example light grey */
+    color: #333;
+    border-bottom-left-radius: 5px; /* Slight visual cue */
+}
+
+.message-bubble p {
+    margin: 0;
+    white-space: pre-wrap; /* Preserve line breaks from the backend */
+}
+
+/* 打字机光标效果 */
+.message-bubble.streaming {
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #333;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+    vertical-align: middle;
+}
+
+/* 内联打字指示器，用于空消息 */
+.typing-indicator-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+}
+
+.typing-indicator-inline span {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #888;
+    border-radius: 50%;
+    display: inline-block;
+    animation: typing-dot 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator-inline span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator-inline span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator-inline span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-dot {
+    0%, 80%, 100% { transform: scale(0.8); opacity: 0.6; }
+    40% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

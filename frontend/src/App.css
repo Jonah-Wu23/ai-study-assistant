@@ -1,0 +1,48 @@
+/* frontend/src/App.css */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif; /* Basic font */
+    background-color: #f4f7f6; /* Light overall background */
+  }
+  
+  .app-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Prevent body scroll */
+  }
+  
+  .sidebar {
+    width: 280px; /* Fixed width for the sidebar */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    background-color: #ffffff; /* White background for sidebar */
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    z-index: 10; /* Ensure sidebar is above chat area if overlapping */
+  }
+  
+  .chat-area {
+    flex-grow: 1; /* Take up remaining space */
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack error banner and chat window */
+    overflow: hidden; /* Prevent chat area scroll, inner components handle scroll */
+  }
+  
+  .error-banner {
+     background-color: #dc3545; /* Red for errors */
+     color: white;
+     padding: 10px;
+     text-align: center;
+     font-size: 0.9em;
+     width: 100%; /* Take full width of chat area */
+     box-sizing: border-box; /* Include padding in width */
+     flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  /* Ensure ChatWindow takes remaining height after error banner */
+  .chat-area > :last-child { /* Target the last child (ChatWindow) */
+      flex-grow: 1;
+      min-height: 0; /* Allow shrinking if needed */
+  }

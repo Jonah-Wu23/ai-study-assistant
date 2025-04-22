@@ -1,0 +1,31 @@
+# Python
+backend/__pycache__/
+backend/venv/
+backend/*.pyc
+backend/.env
+
+# 数据和缓存
+backend/data/
+backend/vector_store/
+backend/embedding_models_cache_zh/
+backend/chat_history/
+backend/venv/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# 前端构建产物
+frontend/dist/
+
+# 归档和临时文件
+*.tar.gz
+*.zip
+*.log
+allfileshas.txt
+
+# IDE配置
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

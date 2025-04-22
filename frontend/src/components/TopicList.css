@@ -1,0 +1,118 @@
+/* frontend/src/components/TopicList.css */
+.topic-list-container {
+    padding: 15px;
+    border-right: 1px solid #ccc;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-list-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #555;
+}
+
+.new-topic-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.new-topic-button:hover {
+    background-color: #218838;
+}
+
+ .new-topic-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.topic-item {
+    padding: 10px 10px; /* Adjusted padding */
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex; /* Enable flex layout */
+    justify-content: space-between; /* Push button to the right */
+    align-items: center; /* Vertically align text and button */
+    position: relative; /* Needed if using absolute positioning for button */
+}
+
+.topic-item:hover {
+    background-color: #f8f9fa;
+}
+
+.topic-item.selected {
+    background-color: #e9ecef;
+}
+
+.topic-info {
+    /* Container for text to allow ellipsis */
+    flex-grow: 1;
+    overflow: hidden; /* Prevent text pushing button out */
+    margin-right: 10px; /* Space between text and button */
+}
+
+
+.topic-name {
+    font-weight: 500;
+    margin-bottom: 3px;
+     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; /* Ensure it takes block space */
+}
+
+.topic-preview {
+    font-size: 0.85em;
+    color: #6c757d;
+     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+     display: block; /* Ensure it takes block space */
+}
+
+/* Styles for the delete button */
+.delete-topic-button {
+    background: none;
+    border: none;
+    color: #dc3545; /* Red color for delete */
+    cursor: pointer;
+    padding: 5px; /* Make it easy to click */
+    font-size: 0.9em; /* Adjust icon size */
+    line-height: 1; /* Prevent extra spacing */
+    opacity: 0.6; /* Slightly faded until hover */
+    transition: opacity 0.2s ease, color 0.2s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.topic-item:hover .delete-topic-button {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.delete-topic-button:hover {
+    color: #a71d2a; /* Darker red on hover */
+}
+
+.delete-topic-button:disabled {
+    color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.4;
+}
