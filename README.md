@@ -22,6 +22,7 @@ ai-study-assistant 是一款基于本地 GraphRAG 构建的 AI 学习辅助平�
 
 ## 项目结构
 
+第一次运行时，需按照以下项目结构进行构建：
 ```
 ai-study-assistant/
 ├── backend/
@@ -47,6 +48,22 @@ ai-study-assistant/
 ```
 
 ## 安装与运行
+
+需手动创建.env文件在backend\.env
+内容如下：
+```bash
+# .env
+COURSE_MATERIAL_DIR=./data
+CHAT_HISTORY_DIR=./chat_history
+GRAPHRAG_ROOT_DIR=./data # Root for graphrag files
+
+# DeepSeek Credentials (Used by graphrag_processor to create settings.yaml)
+DEEPSEEK_API_KEY=YourDeepSeekApiKey
+DEEPSEEK_MODEL=deepseek-chat
+DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
+
+# PORT=8000 # Optional: Define server port
+```
 
 ### 后端
 ```powershell
