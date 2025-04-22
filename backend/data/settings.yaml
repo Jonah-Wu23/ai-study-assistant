@@ -7,13 +7,13 @@
 models:
   default_chat_model:
     type: openai_chat # or azure_openai_chat
-    api_base: https://api.groq.com/openai/v1
+    api_base: https://dashscope.aliyuncs.com/compatible-mode/v1
     # api_version: 2024-05-01-preview
     auth_type: api_key # or azure_managed_identity
     api_key: ${GRAPHRAG_API_KEY} # set this in the generated .env file
     # audience: "https://cognitiveservices.azure.com/.default"
     # organization: <organization_id>
-    model: meta-llama/llama-4-scout-17b-16e-instruct
+    model: qwen-turbo-latest
     # deployment_name: <azure_model_deployment_name>
     encoding_model: cl100k_base # automatically set by tiktoken if left undefined
     model_supports_json: true # recommended if this is available for your model.

@@ -60,7 +60,7 @@ CHAT_HISTORY_DIR=./chat_history
 GRAPHRAG_ROOT_DIR=./data # 知识文件目录
 
 # API Keys
-GRAPHRAG_API_KEY=YourChatApiKey # 我使用的是groq的 meta-llama/llama-4-scout-17b-16e-instruct,你可以使用其他模型，例如 gpt-4o, 在backend/data/settings.yaml中设置
+GRAPHRAG_API_KEY=YourChatApiKey # 我使用的是qwen-turbo-latest,你可以使用其他模型，例如 gpt-4o, 在backend/data/settings.yaml中设置
 TEXT_EMBEDDING_API_KEY=YourEmbeddingApiKey
 ```
 

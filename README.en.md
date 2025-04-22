@@ -53,7 +53,7 @@ CHAT_HISTORY_DIR=./chat_history
 GRAPHRAG_ROOT_DIR=./data # Root for graphrag files
 
 # API Keys
-GRAPHRAG_API_KEY=YourChatApiKey # I use meta-llama/llama-4-scout-17b-16e-instruct, you can use other models, such as gpt-4o, config in backend/data/settings.yaml
+GRAPHRAG_API_KEY=YourChatApiKey # I use qwen-turbo-latest, you can use other models, such as gpt-4o, config in backend/data/settings.yaml
 TEXT_EMBEDDING_API_KEY=YourEmbeddingApiKey
 ```
 
