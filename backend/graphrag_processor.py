@@ -47,9 +47,9 @@ log = logging.getLogger(__name__)
 # --- End Logging Setup ---
 
 # --- Configuration ---
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'data', '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 if not os.path.exists(dotenv_path):
-     dotenv_path = './data/.env'
+    dotenv_path = os.path.join(os.path.dirname(__file__), 'data', '.env')
 load_dotenv(dotenv_path=dotenv_path)
 
 GRAPHRAG_ROOT_DIR = os.path.abspath(os.getenv("GRAPHRAG_ROOT_DIR", "./data"))

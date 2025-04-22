@@ -51,20 +51,17 @@ ai-study-assistant/
 
 ## 安装与运行
 
-需手动创建.env文件在backend\.env
+需手动创建.env文件在backend/.env
 内容如下：
 ```bash
 # .env
 COURSE_MATERIAL_DIR=./data
 CHAT_HISTORY_DIR=./chat_history
-GRAPHRAG_ROOT_DIR=./data # Root for graphrag files
+GRAPHRAG_ROOT_DIR=./data # 知识文件目录
 
-# DeepSeek Credentials (Used by graphrag_processor to create settings.yaml)
-DEEPSEEK_API_KEY=YourDeepSeekApiKey
-DEEPSEEK_MODEL=deepseek-chat
-DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
-
-# PORT=8000 # Optional: Define server port
+# API Keys
+GRAPHRAG_API_KEY=YourChatApiKey # 我使用的是groq的 meta-llama/llama-4-scout-17b-16e-instruct,你可以使用其他模型，例如 gpt-4o, 在backend/data/settings.yaml中设置
+TEXT_EMBEDDING_API_KEY=YourEmbeddingApiKey
 ```
 
 ### 后端

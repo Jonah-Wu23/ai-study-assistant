@@ -5,7 +5,8 @@ backend/*.pyc
 backend/.env
 
 # 数据和缓存
-backend/data/
+/backend/data/*
+!/backend/data/settings.yaml
 backend/vector_store/
 backend/embedding_models_cache_zh/
 backend/chat_history/

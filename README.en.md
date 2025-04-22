@@ -52,12 +52,9 @@ COURSE_MATERIAL_DIR=./data
 CHAT_HISTORY_DIR=./chat_history
 GRAPHRAG_ROOT_DIR=./data # Root for graphrag files
 
-# DeepSeek Credentials (Used by graphrag_processor to create settings.yaml)
-DEEPSEEK_API_KEY=YourDeepSeekApiKey
-DEEPSEEK_MODEL=deepseek-chat
-DEEPSEEK_BASE_URL=https://api.deepseek.com/v1
-
-# PORT=8000 # Optional: Define server port
+# API Keys
+GRAPHRAG_API_KEY=YourChatApiKey # I use meta-llama/llama-4-scout-17b-16e-instruct, you can use other models, such as gpt-4o, config in backend/data/settings.yaml
+TEXT_EMBEDDING_API_KEY=YourEmbeddingApiKey
 ```
 
 ### Back - end
